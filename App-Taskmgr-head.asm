@@ -61,13 +61,13 @@ prgmemtab   db "SymExe10"           ;SymbOS-EXE-identifier              POST tab
             dw 0                    ;additional data memory (temp text + actual font)
             dw 0                    ;additional transfer memory
             ds 26                   ;*reserviert*
-            db 0,4                  ;required OS version (4.0)
+            db 1,4                  ;required OS version (4.0)
 
 tskicnsml   db 2,8,8,#77,#EE,#F8,#F1,#E9,#F1,#DA,#79,#BC,#5B,#F8,#B5,#F8,#F1,#77,#EE
 tskicnbig   db 6,24,24
-            db #00,#00,#00,#00,#00,#00,#00,#77,#FF,#FF,#FF,#CC,#00,#8F,#0F,#0F,#0F,#64,#11,#0F,#0F,#0F,#0E,#EC,#22,#00,#00,#00,#11,#EC,#22,#7C,#F0,#F0,#D7,#EC,#22,#78,#F0,#F0,#D3,#EC,#22,#78,#F0,#F0,#D3,#EC
-            db #22,#78,#B4,#F0,#D3,#EC,#22,#78,#5A,#F0,#D3,#EC,#22,#4F,#E1,#E1,#5F,#EC,#22,#78,#F0,#5A,#D3,#EC,#22,#78,#F0,#B4,#D3,#EC,#22,#78,#F0,#F0,#D3,#EC,#22,#7C,#F0,#F0,#D7,#EC,#22,#0F,#0F,#0F,#1F,#EA
-            db #33,#FF,#FF,#FF,#FF,#F6,#70,#F0,#F0,#F0,#F0,#FE,#88,#00,#00,#00,#00,#FE,#8B,#0F,#0F,#0F,#0F,#FE,#9B,#9E,#F0,#3C,#E1,#FE,#8B,#0F,#2F,#0F,#4F,#EC,#FF,#FF,#FF,#FF,#FF,#C8,#70,#F0,#F0,#F0,#F0,#80
+            db #3f,#ff,#ff,#ff,#ff,#fe,#6f,#0f,#0f,#0f,#0f,#3a,#cc,#00,#00,#00,#00,#fe,#8b,#0f,#0f,#0f,#0f,#fe,#9b,#ff,#ff,#ff,#cd,#fe,#9a,#f0,#f0,#f0,#c5,#fe,#9a,#f0,#e0,#f0,#c1,#fe,#9a,#f0,#60,#f0,#c1,#fe
+            db #9a,#e0,#50,#70,#c1,#fe,#8a,#00,#50,#00,#01,#fe,#9a,#f0,#90,#f0,#c1,#fe,#9a,#f0,#b0,#f0,#c1,#fe,#9b,#f0,#f0,#f0,#c1,#fe,#8a,#00,#00,#00,#01,#fd,#8b,#0f,#0f,#0f,#0f,#fa,#ff,#ff,#ff,#ff,#ff,#d6
+            db #f0,#f0,#f0,#f0,#f0,#be,#ff,#ff,#ff,#ff,#ff,#7e,#88,#00,#00,#00,#00,#fe,#8b,#0f,#0f,#0f,#0f,#fe,#8a,#07,#3c,#f0,#c3,#fe,#9b,#8f,#0f,#6f,#0f,#fe,#8b,#0f,#0f,#0f,#0f,#fc,#f0,#f0,#f0,#f0,#f0,#e1
 
 
 ;*** KERNEL LIBRARY USAGE
@@ -89,6 +89,7 @@ use_SySystem_PRGSRV     equ 0   ;Manages shared services or finds applications
 use_SySystem_SYSWRN     equ 1   ;Opens an info, warning or confirm box
 use_SySystem_SELOPN     equ 1   ;Opens the file selection dialogue
 use_SySystem_HLPOPN	equ 1   ;HLP file handling
+use_SySystem_LNGLOD     equ 1   ;Loads a text pack from a language file
 
 ;*** DESKTOP MANAGER LIBRARY USAGE
 use_SyDesktop_WINOPN    equ 1   ;Opens a new window

@@ -1,8 +1,9 @@
 ;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 ;@                                                                            @
 ;@                 S y m b O S   -   T a s k - M a n a g e r                  @
+;@                   (default application texts [english])                    @
 ;@                                                                            @
-;@             (c) 2004-2022 by Prodatron / SymbiosiS (Jörn Mika)             @
+;@             (c) 2004-2025 by Prodatron / SymbiosiS (Jörn Mika)             @
 ;@                                                                            @
 ;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
@@ -42,7 +43,8 @@ przdatmem   equ 0
 timdatmem   equ przdatmax*przdatlen
 
 
-prgprz  call tskini
+prgprz  call prglng
+        call tskini
         call SySystem_HLPINI
 
         ld a,(App_BnkNum)
@@ -679,6 +681,19 @@ tskcur6 push bc
         pop hl
         ret
 
+;### PRGLNG -> load language pack
+prglng  ld hl,(App_BegCode)
+        ld de,App_BegCode
+        dec h
+        add hl,de               ;HL=code area end=path
+        ex de,hl
+        ld a,(App_BnkNum)
+        ld c,a
+        ld hl,texts_int
+        ld ix,256*0+9           ;default language=9 (english), pack=0
+        ld iyl,0                ;language-file version 0
+        jp SySystem_LNGLOD
+
 ;### TSKINI -> Taskmanager initialisieren
 tskini  ld hl,jmp_sysinf        ;*** Computer-Typ holen
         ld de,256*1+5
@@ -1179,71 +1194,35 @@ clcdiv2 ccf
 App_BegData
 
 prgicn16c db 12,24,24:dw $+7:dw $+4,12*24:db 5
-db #88,#88,#88,#88,#88,#88,#88,#88,#88,#88,#88,#88,#88,#88,#81,#11,#11,#11,#11,#11,#11,#11,#11,#88,#88,#88,#1D,#DD,#DD,#DD,#DD,#DD,#DD,#DD,#61,#38,#88,#81,#DD,#DD,#DD,#DD,#DD,#DD,#DD,#D6,#11,#38
-db #88,#16,#66,#66,#66,#66,#66,#66,#66,#61,#11,#38,#88,#16,#D1,#55,#55,#55,#55,#55,#51,#D1,#11,#38,#88,#16,#D5,#55,#55,#55,#55,#55,#55,#D1,#11,#38,#88,#16,#D5,#55,#55,#55,#55,#55,#55,#D1,#11,#38
-db #88,#16,#D5,#55,#5A,#55,#55,#55,#55,#D1,#11,#38,#88,#16,#D5,#55,#A5,#A5,#55,#55,#55,#D1,#11,#38,#88,#16,#D1,#AA,#55,#5A,#55,#5A,#A1,#D1,#11,#38,#88,#16,#D5,#55,#55,#55,#A5,#A5,#55,#D1,#11,#38
-db #88,#16,#D5,#55,#55,#55,#5A,#55,#55,#D1,#11,#38,#88,#16,#D5,#55,#55,#55,#55,#55,#55,#D1,#11,#38,#88,#16,#D1,#55,#55,#55,#55,#55,#51,#D1,#11,#38,#88,#16,#DD,#DD,#DD,#DD,#DD,#DD,#DD,#D1,#13,#18
-db #88,#11,#11,#11,#11,#11,#11,#11,#11,#11,#31,#13,#83,#33,#33,#33,#33,#33,#33,#33,#33,#33,#11,#13,#1D,#DD,#DD,#DD,#DD,#DD,#DD,#DD,#DD,#DD,#11,#13,#1D,#66,#66,#66,#66,#66,#66,#66,#66,#66,#11,#13
-db #1D,#61,#16,#6F,#FF,#FF,#66,#FF,#FF,#F6,#11,#13,#1D,#66,#66,#66,#66,#16,#66,#66,#61,#66,#11,#38,#11,#11,#11,#11,#11,#11,#11,#11,#11,#11,#13,#88,#83,#33,#33,#33,#33,#33,#33,#33,#33,#33,#38,#88
+db #66,#55,#55,#55,#55,#55,#55,#55,#55,#55,#55,#51,#65,#5d,#dd,#dd,#dd,#dd,#dd,#dd,#dd,#dd,#d8,#51,#55,#88,#88,#88,#88,#88,#88,#88,#88,#88,#65,#51,#58,#dd,#dd,#dd,#dd,#dd,#dd,#dd,#dd,#dd,#55,#51
+db #58,#d5,#55,#55,#55,#55,#55,#55,#55,#8d,#55,#51,#58,#d1,#11,#11,#11,#11,#11,#11,#15,#8d,#55,#51,#58,#d1,#11,#11,#11,#1a,#11,#11,#11,#8d,#55,#51,#58,#d1,#11,#11,#a1,#1a,#11,#11,#11,#8d,#55,#51
+db #58,#d1,#11,#1a,#a1,#a1,#a1,#11,#11,#8d,#55,#51,#58,#da,#aa,#aa,#a1,#a1,#aa,#aa,#aa,#8d,#55,#51,#58,#d1,#11,#11,#1a,#a1,#11,#11,#11,#8d,#55,#51,#58,#d1,#11,#11,#1a,#11,#11,#11,#11,#8d,#55,#51
+db #58,#d5,#11,#11,#11,#11,#11,#11,#11,#8d,#55,#51,#58,#d8,#88,#88,#88,#88,#88,#88,#88,#8d,#55,#15,#58,#dd,#dd,#dd,#dd,#dd,#dd,#dd,#dd,#dd,#51,#51,#55,#55,#55,#55,#55,#55,#55,#55,#55,#55,#15,#d1
+db #11,#11,#11,#11,#11,#11,#11,#11,#11,#11,#5d,#51,#55,#55,#55,#55,#55,#55,#55,#55,#55,#55,#d5,#51,#58,#88,#88,#88,#88,#88,#88,#88,#88,#88,#55,#51,#58,#dd,#dd,#dd,#dd,#dd,#dd,#dd,#dd,#dd,#55,#51
+db #58,#da,#ad,#dd,#dd,#11,#11,#11,#11,#dd,#55,#51,#58,#d9,#9d,#dd,#dd,#dd,#d5,#5d,#dd,#dd,#55,#51,#58,#dd,#dd,#dd,#dd,#dd,#dd,#dd,#dd,#dd,#55,#11,#11,#11,#11,#11,#11,#11,#11,#11,#11,#11,#11,#16
+
+;==============================================================================
+;%%% MULTI LANGUAGE TEXTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+;==============================================================================
+
+texts_int
+read"App-Taskmgr-Texts.asm"
+texts_int_end
+
+list
+texts_int_len   equ texts_int_end-texts_int
+nolist
+
+App_PrcIDam0    db "IDLE",0
+App_PrcIDam1    db "KERNEL",0
+App_PrcIDam2    db "DESKTOP",0
+App_PrcIDam3    db "SYSTEM",0
 
 ;### GENERAL ##################################################################
 
-prgmsginf1 db "SymbOS TASK MANAGER",0
-prgmsginf2 db " Version 2.0 (Build 220115pdt)",0
-prgmsginf3 db " Copyright <c> 2022 SymbiosiS",0
-
-przpritxt1 db "Do you want to change the priority?",0
-przpritxt2 db " Changing the proirity could",0
-przpritxt3 db " cause system instability.",0
-
-tskdattit db "Task Manager",0
-
-prgdatmentx1  db "File",0
-    prgdatmen1tx1 db "New Task (Run...)",0
-    prgdatmen1tx2 db "Exit Task Manager",0
-
-prgdatmentx2  db "View",0
-    prgdatmen2tx1 db "Refresh Now",0
-    prgdatmen2tx2 db "Update Speed",0
-        prgdatmen4tx1 db "High",0
-        prgdatmen4tx2 db "Normal",0
-        prgdatmen4tx3 db "Low",0
-        prgdatmen4tx4 db "Paused",0
-    prgdatmen2tx3 db "Only when focus",0
-
-prgdatmentx3  db "?",0
-    prgdatmen3tx1 db "Help Topics",0
-    prgdatmen3tx2 db "About",0
-
-;### PROCESS CONTEXT MENU #####################################################
-
-przdatmentx1    db "Kill process",0
-przdatmentx2    db "Send to sleep",0
-przdatmentx3    db "Set priority",0
-    przdatmen1tx1   db "Realtime",0
-    przdatmen1tx2   db "High",0
-    przdatmen1tx3   db "Above normal",0
-    przdatmen1tx4   db "Normal",0
-    przdatmen1tx5   db "Below normal",0
-    przdatmen1tx6   db "Low",0
-    przdatmen1tx7   db "Background",0
-
-;### PERFORMANCE ##############################################################
-
-tsktabtxt1 db "Apps.",0
-tsktabtxt2 db "Proces.",0
-tsktabtxt3 db "Performance",0
-
-tskobjtxt1  db "Totals",0
-tskobjtxt2  db "Memory (KB)",0
-tskobjtxt3  db "Applications",0
-tskobjtxt4  db "Processes",0
-tskobjtxt5  db "Timers",0
-tskobjtxt6  db "Total",0
-tskobjtxt7  db "Used",0
-tskobjtxt8  db "Available",0
-tskobjtxt10 db "CPU",0
-tskobjtxt11 db "Memory",0
+prgmsginf2 db " Version 2.0 (Build "
+read "..\..\..\SRC-Main\build.asm"
+            db "pdt)",0
 
 tsksprcpu   db 12,48,40
 db #FF,#FF,#FF,#FF,#FF,#FF,#FF,#FF,#FF,#FF,#FF,#FF,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0
@@ -1289,32 +1268,6 @@ db #F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#
 db #FF,#FF,#FF,#FF,#FF,#FF,#FF,#FF,#FF,#FF,#FF,#FF,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0
 db #F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0,#F8,#F0
 
-;### PROCESSES ################################################################
-
-prgprzrow1 db "Name",0
-prgprzrow2 db "ID",0
-prgprzrow3 db "Pri.",0
-prgprzrow4 db "Status",0
-
-tskapprow3 db "Prc.",0
-tskapprow4 db "Mem.",0
-
-prgprzsta0 db "Timer",0
-prgprzsta1 db "Sleep",0
-prgprzsta2 db "Idle",0
-prgprzsta3 db "Work",0
-
-App_PrcIDam0 db "IDLE",0
-App_PrcIDam1 db "KERNEL",0
-App_PrcIDam2 db "DESKTOP",0
-App_PrcIDam3 db "SYSTEM",0
-App_PrcIDam4 db "Application",0
-
-prgprzbut1 db "Refresh",0
-prgprzbut2 db "Sleep",0
-prgprzbut3 db "Kill",0
-tskappbut2 db "Switch",0
-tskappbut3 db "End App.",0
 
 
 ;==============================================================================
@@ -1450,7 +1403,7 @@ tskobjtxt12 db "100%",0
 tskobjtxt13 db "100%",0
 
 ;Info/Warning boxes
-prgmsginf  dw prgmsginf1,4*1+2,prgmsginf2,4*1+2,prgmsginf3,4*1+2,tskicnbig
-przpridat  dw przpritxt1,4*1+2,przpritxt2,4*1+2,przpritxt3,4*1+2,tskicnbig
+prgmsginf  dw prgmsginf1,4*1+2,prgmsginf2,4*1+2,prgmsginf3,4*1+2,0,tskicnbig,prgicn16c
+przpridat  dw przpritxt1,4*1+2,przpritxt2,4*1+2,przpritxt3,4*1+2,0,tskicnbig,prgicn16c
 
 cfgcpctyp   db 0

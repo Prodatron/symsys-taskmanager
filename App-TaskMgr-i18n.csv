@@ -1,0 +1,61 @@
+labels,ENG,DEU,NLD
+### pack0,59,770
+prgmsginf1,SymbOS TASK MANAGER,SymbOS TASK MANAGER,SymbOS TAAKBEHEER
+prgmsginf3, Copyright <c> 2025 SymbiosiS, Copyright <c> 2025 SymbiosiS,Copyright © 2025 SymbiosiS
+przpritxt1,Do you want to change the priority?,Priorität ändern?,Prioriteit wijzigen?
+przpritxt2, Changing the proirity could, Kann zur System-, Kan systeeminstabiliteit
+przpritxt3, cause system instability., Instabilität führen., veroorzaken.
+tskdattit,Task Manager,Task Manager,Taakbeheer
+prgdatmentx1,File,Datei,Bestand
+prgdatmen1tx1,New Task (Run...),Neuen Task ausführen...,Nieuwe taak uitvoeren...
+prgdatmen1tx2,Exit Task Manager,Beenden,Afsluiten
+prgdatmentx2,View,Anzeige,Beeld
+prgdatmen2tx1,Refresh Now,Aktualisieren,Vernieuwen
+prgdatmen2tx2,Update Speed,Aktualis.Rate,Snelheid
+prgdatmen4tx1,High,Hoch,Hoog
+prgdatmen4tx2,Normal,Normal,Normaal
+prgdatmen4tx3,Low,Niedrig,Laag
+prgdatmen4tx4,Paused,Angehalten,Gepauzeerd
+prgdatmen2tx3,Only when focus,Nur im Vordergrund,Bij focus
+prgdatmentx3,?,?,?
+prgdatmen3tx1,Help Topics,Hilfe,Help
+prgdatmen3tx2,About,Info,Over
+przdatmentx1,Kill process,Prozess beenden,Proces beëindigen
+przdatmentx2,Send to sleep,Schlafen legen,Slaapstand
+przdatmentx3,Set priority,Priorität ändern,Prioriteit
+przdatmen1tx1,Realtime,Echtzeit,Realtime
+przdatmen1tx2,High,Sehr hoch,Hoog
+przdatmen1tx3,Above normal,Höher,Boven normaal
+przdatmen1tx4,Normal,Normal,Normaal
+przdatmen1tx5,Below normal,Niedriger,Onder normaal
+przdatmen1tx6,Low,Sehr niedrig,Laag
+przdatmen1tx7,Background,Hintergrund,Achtergrond
+tsktabtxt1,Apps.,Anwend.,Apps.
+tsktabtxt2,Proces.,Prozesse,Processen
+tsktabtxt3,Performance,Leistung,Prestaties
+tskobjtxt1,Totals,Insgesamt,Totalen
+tskobjtxt2,Memory (KB),Speicher (KB),Geheugen (KB)
+tskobjtxt3,Applications,Anwendungen,Applicaties
+tskobjtxt4,Processes,Prozesse,Processen
+tskobjtxt5,Timers,Timer,Timers
+tskobjtxt6,Total,Insgesamt,Totaal
+tskobjtxt7,Used,Belegt,Gebruikt
+tskobjtxt8,Available,Verfügbar,Beschikbaar
+tskobjtxt10,CPU,CPU,CPU
+tskobjtxt11,Memory,Speicher,Geheugen
+prgprzrow1,Name,Name,Naam
+prgprzrow2,ID,ID,ID
+prgprzrow3,Pri.,Pri.,Pri.
+prgprzrow4,Status,Status,Status
+tskapprow3,Prc.,Prz.,Prc.
+tskapprow4,Mem.,Spei.,Mem.
+prgprzsta0,Timer,Timer,Timer
+prgprzsta1,Sleep,Stopp,Slaap
+prgprzsta2,Idle,Leerl,Inact.
+prgprzsta3,Work,Arbeit,Werk
+App_PrcIDam4,Application,Anwendung,Applicatie
+prgprzbut1,Refresh,Aktual.,Update
+prgprzbut2,Sleep,Stopp,Slaap
+prgprzbut3,Kill,Beenden,Beëindig
+tskappbut2,Switch,Wechs.,Wisselen
+tskappbut3,End App.,Beenden,Afsluit.

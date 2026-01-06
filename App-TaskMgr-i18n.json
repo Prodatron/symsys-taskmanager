@@ -1,0 +1,7 @@
+{
+    "asm": {
+        "0": "App-TaskMgr-Texts.asm"
+    },
+    "csv": "App-TaskMgr-i18n.csv",
+    "lng": "f:/symbos/taskmgr.lng"
+}
