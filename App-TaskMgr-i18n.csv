@@ -1,61 +1,61 @@
-labels,ENG,DEU,NLD
+labels,ENG,DEU,NLD,SPA,TUR,POR,ITA
 ### pack0,59,770
-prgmsginf1,SymbOS TASK MANAGER,SymbOS TASK MANAGER,SymbOS TAAKBEHEER
-prgmsginf3, Copyright <c> 2025 SymbiosiS, Copyright <c> 2025 SymbiosiS,Copyright © 2025 SymbiosiS
-przpritxt1,Do you want to change the priority?,Priorität ändern?,Prioriteit wijzigen?
-przpritxt2, Changing the proirity could, Kann zur System-, Kan systeeminstabiliteit
-przpritxt3, cause system instability., Instabilität führen., veroorzaken.
-tskdattit,Task Manager,Task Manager,Taakbeheer
-prgdatmentx1,File,Datei,Bestand
-prgdatmen1tx1,New Task (Run...),Neuen Task ausführen...,Nieuwe taak uitvoeren...
-prgdatmen1tx2,Exit Task Manager,Beenden,Afsluiten
-prgdatmentx2,View,Anzeige,Beeld
-prgdatmen2tx1,Refresh Now,Aktualisieren,Vernieuwen
-prgdatmen2tx2,Update Speed,Aktualis.Rate,Snelheid
-prgdatmen4tx1,High,Hoch,Hoog
-prgdatmen4tx2,Normal,Normal,Normaal
-prgdatmen4tx3,Low,Niedrig,Laag
-prgdatmen4tx4,Paused,Angehalten,Gepauzeerd
-prgdatmen2tx3,Only when focus,Nur im Vordergrund,Bij focus
-prgdatmentx3,?,?,?
-prgdatmen3tx1,Help Topics,Hilfe,Help
-prgdatmen3tx2,About,Info,Over
-przdatmentx1,Kill process,Prozess beenden,Proces beëindigen
-przdatmentx2,Send to sleep,Schlafen legen,Slaapstand
-przdatmentx3,Set priority,Priorität ändern,Prioriteit
-przdatmen1tx1,Realtime,Echtzeit,Realtime
-przdatmen1tx2,High,Sehr hoch,Hoog
-przdatmen1tx3,Above normal,Höher,Boven normaal
-przdatmen1tx4,Normal,Normal,Normaal
-przdatmen1tx5,Below normal,Niedriger,Onder normaal
-przdatmen1tx6,Low,Sehr niedrig,Laag
-przdatmen1tx7,Background,Hintergrund,Achtergrond
-tsktabtxt1,Apps.,Anwend.,Apps.
-tsktabtxt2,Proces.,Prozesse,Processen
-tsktabtxt3,Performance,Leistung,Prestaties
-tskobjtxt1,Totals,Insgesamt,Totalen
-tskobjtxt2,Memory (KB),Speicher (KB),Geheugen (KB)
-tskobjtxt3,Applications,Anwendungen,Applicaties
-tskobjtxt4,Processes,Prozesse,Processen
-tskobjtxt5,Timers,Timer,Timers
-tskobjtxt6,Total,Insgesamt,Totaal
-tskobjtxt7,Used,Belegt,Gebruikt
-tskobjtxt8,Available,Verfügbar,Beschikbaar
-tskobjtxt10,CPU,CPU,CPU
-tskobjtxt11,Memory,Speicher,Geheugen
-prgprzrow1,Name,Name,Naam
-prgprzrow2,ID,ID,ID
-prgprzrow3,Pri.,Pri.,Pri.
-prgprzrow4,Status,Status,Status
-tskapprow3,Prc.,Prz.,Prc.
-tskapprow4,Mem.,Spei.,Mem.
-prgprzsta0,Timer,Timer,Timer
-prgprzsta1,Sleep,Stopp,Slaap
-prgprzsta2,Idle,Leerl,Inact.
-prgprzsta3,Work,Arbeit,Werk
-App_PrcIDam4,Application,Anwendung,Applicatie
-prgprzbut1,Refresh,Aktual.,Update
-prgprzbut2,Sleep,Stopp,Slaap
-prgprzbut3,Kill,Beenden,Beëindig
-tskappbut2,Switch,Wechs.,Wisselen
-tskappbut3,End App.,Beenden,Afsluit.
+prgmsginf1,SymbOS TASK MANAGER,SymbOS TASK MANAGER,SymbOS TAAKBEHEER,GESTOR DE TAREAS de SymbOS,SymbOS GÖREV YÖNETİCİSİ,GERENCIADOR DE TAREFAS,SymbOS TASK MANAGER
+prgmsginf3, Copyright <c> 2025 SymbiosiS, Copyright <c> 2025 SymbiosiS,Copyright © 2025 SymbiosiS, Copyright <c> 2025 SymbiosiS, Copyright <c> 2025 SymbiosiS, © 2025 SymbiosiS, © 2025 SymbiosiS
+przpritxt1,Do you want to change the priority?,Priorität ändern?,Prioriteit wijzigen?,¿Quieres cambiar la prioridad?,Öncelik değişikliği mi?,Deseja alterar a prioridade?,Vuoi modificare la priorità?
+przpritxt2, Changing the proirity could, Kann zur System-, Kan systeeminstabiliteit, Cambiar la prioridad puede ,Sistem istikrarsızlığına, Alterar a prioridade pode,Modificarla può causare
+przpritxt3, cause system instability., Instabilität führen., veroorzaken., provocar inestabilidad del sistema.,yol açabilir., causar instabilidade no sistema.,instabilità del sistema.
+tskdattit,Task Manager,Task Manager,Taakbeheer,Gestor de Tareas,Görev Yöneticisi,Gerenciador de Tarefas,Task Manager
+prgdatmentx1,File,Datei,Bestand,Archivo,Dosya,Arquivo,File
+prgdatmen1tx1,New Task (Run...),Neuen Task ausführen...,Nieuwe taak uitvoeren...,Nueva Tarea…,Yeni Görev…,Nova Tarefa…,Nuovo Task (esegui..)
+prgdatmen1tx2,Exit Task Manager,Beenden,Afsluiten,Salir,Kapat,Sair,Esci da Task Manager
+prgdatmentx2,View,Anzeige,Beeld,Ver,Görüntüle,Exibir,Visualizza
+prgdatmen2tx1,Refresh Now,Aktualisieren,Vernieuwen,Actualizar,Şimdi Tazele,Atualizar,Aggiorna
+prgdatmen2tx2,Update Speed,Aktualis.Rate,Snelheid,Actualizar Velocidad,Hızı Güncelle,Velocidade de Atualização,Aggiorna velocità
+prgdatmen4tx1,High,Hoch,Hoog,Alta,Yüksek,Alta,Alta
+prgdatmen4tx2,Normal,Normal,Normaal,Normal,Normal,Normal,Normale
+prgdatmen4tx3,Low,Niedrig,Laag,Baja,Düşük,Baixa,Bassa
+prgdatmen4tx4,Paused,Angehalten,Gepauzeerd,Pausado,Duraklatıldı,Pausado,Pausa
+prgdatmen2tx3,Only when focus,Nur im Vordergrund,Bij focus,Solo cuando activo,Sadece odaklanıldığında,Quando ativo,Solo quando attivo
+prgdatmentx3,?,?,?,?,?,?,?
+prgdatmen3tx1,Help Topics,Hilfe,Help,Ayuda,Yardım,Ajuda,Aiuto
+prgdatmen3tx2,About,Info,Over,Info,Hakkında,Sobre,Info
+przdatmentx1,Kill process,Prozess beenden,Proces beëindigen,Terminar,İşlemi öldür,Encerrar,Termina processo
+przdatmentx2,Send to sleep,Schlafen legen,Slaapstand,Pausar,Uykuya gönder,Suspender,Metti in pausa
+przdatmentx3,Set priority,Priorität ändern,Prioriteit,Prioridad,Öncelik belirle,Definir prioridade,Imposta priorità
+przdatmen1tx1,Realtime,Echtzeit,Realtime,Tiempo real,Gerçek zamanlı,Tempo real,Tempo reale
+przdatmen1tx2,High,Sehr hoch,Hoog,Alto,Yüksek,Alta,++
+przdatmen1tx3,Above normal,Höher,Boven normaal,Normal +,Normalin üzerinde,Normal +,+
+przdatmen1tx4,Normal,Normal,Normaal,Normal,Normal,Normal,Normale
+przdatmen1tx5,Below normal,Niedriger,Onder normaal,Normal -,Normalin altında,Normal -,-
+przdatmen1tx6,Low,Sehr niedrig,Laag,Bajo,Düşük,Baixa,--
+przdatmen1tx7,Background,Hintergrund,Achtergrond,Fondo,Arkaplan,Segundo plano,In secondo piano
+tsktabtxt1,Apps.,Anwend.,Apps.,Aplic.,Uygulama,Aplic.,Apps.
+tsktabtxt2,Proces.,Prozesse,Processen,Proc.,İşlemler.,Proc.,Proces.
+tsktabtxt3,Performance,Leistung,Prestaties,Rendimiento,Perform.,Desempenho,Performance
+tskobjtxt1,Totals,Insgesamt,Totalen,Totales,Toplamlar,Totais,Totali
+tskobjtxt2,Memory (KB),Speicher (KB),Geheugen (KB),Memoria (KB),Bellek (KB),Memória (KB),Memoria (KB)
+tskobjtxt3,Applications,Anwendungen,Applicaties,Aplicaciones,Uygulamalar,Aplicativos,Applicazioni
+tskobjtxt4,Processes,Prozesse,Processen,Procesos,İşlemler,Processos,Processi
+tskobjtxt5,Timers,Timer,Timers,Contadores,Timers,Timers,Timers
+tskobjtxt6,Total,Insgesamt,Totaal,Total,Toplam,Total,Totali
+tskobjtxt7,Used,Belegt,Gebruikt,Usado,Kullanılan,Usado,Usata
+tskobjtxt8,Available,Verfügbar,Beschikbaar,Disponible,Boşta,Disponível,Disponibile
+tskobjtxt10,CPU,CPU,CPU,CPU,CPU,CPU,CPU
+tskobjtxt11,Memory,Speicher,Geheugen,Memoria,Bellek,Memória,Memoria
+prgprzrow1,Name,Name,Naam,Nombre,Ad,Nome,Nome
+prgprzrow2,ID,ID,ID,ID,ID,ID,ID
+prgprzrow3,Pri.,Pri.,Pri.,Pri.,Önc,Pri.,Pri.
+prgprzrow4,Status,Status,Status,Est.,Durum,Status,Status
+tskapprow3,Prc.,Prz.,Prc.,Proc.,İşl.,Prc.,Prc.
+tskapprow4,Mem.,Spei.,Mem.,Mem.,Bel.,Mem.,Mem.
+prgprzsta0,Timer,Timer,Timer,Cont.,Timer,Timer,Timer
+prgprzsta1,Sleep,Stopp,Slaap,Paus.,Uyku,Susp.,Pausa
+prgprzsta2,Idle,Leerl,Inact.,Inact.,Boşta,Ocioso,Idle
+prgprzsta3,Work,Arbeit,Werk,Ejec. ,Görev,Ativo,Attivo
+App_PrcIDam4,Application,Anwendung,Applicatie,Aplicación,Uygulama,Aplicativo,Applicazione
+prgprzbut1,Refresh,Aktual.,Update,Act.,Tazele,Atualiz.,Ricarica
+prgprzbut2,Sleep,Stopp,Slaap,Pausar,Uyut,Suspen.,Pausa
+prgprzbut3,Kill,Beenden,Beëindig,Term.,Öldür,Enc.,Termina
+tskappbut2,Switch,Wechs.,Wisselen,Cambiar,Switch,Alternar,Scambia
+tskappbut3,End App.,Beenden,Afsluit.,Term.,Sona,Enc.,Fine

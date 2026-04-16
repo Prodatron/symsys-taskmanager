@@ -371,11 +371,14 @@ tskupdf inc hl
         ld de,(tskapphed+prgdattra):add hl,de:adc 0
         ld b,8
         ld iy,tskapphed+prgpstmem
-tskupdi ld e,(iy+3)
+tskupdi ld e,(iy+0)
+        inc e:dec e
+        jr z,tskupdk
+        ld e,(iy+3)
         ld d,(iy+4)
         add hl,de
         adc 0
-        ld de,5
+tskupdk ld de,5
         add iy,de
         djnz tskupdi
         ex de,hl
@@ -1206,7 +1209,7 @@ db #58,#da,#ad,#dd,#dd,#11,#11,#11,#11,#dd,#55,#51,#58,#d9,#9d,#dd,#dd,#dd,#d5,#
 ;==============================================================================
 
 texts_int
-read"App-Taskmgr-Texts.asm"
+read"App-Taskmgr-i18n.asm"
 texts_int_end
 
 list
